@@ -1,10 +1,5 @@
-import React, { useEffect } from "react";
-import { connect } from "react-redux";
-import { actions } from "../store/reducers";
-const Settings = ({ plus }) => {    
-  useEffect(() => {
-    plus();
-  }, []);
+import React from "react";
+const Settings = () => {
   return (
     <div>
       <h1>Settings</h1>
@@ -12,4 +7,4 @@ const Settings = ({ plus }) => {
   );
 };
 
-export default connect((state) => state.counter, actions)(Settings);
+export default Settings;

@@ -33,7 +33,7 @@ const NavBar = () => {
         </ul>
         <div className="flex gap-4">
           <img className="w-7 h-7 " src={notification} alt="" />
-          <DropDown/>
+          <DropDown />
         </div>
       </div>
     </div>

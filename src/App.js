@@ -7,6 +7,8 @@ import Home from "./pages/home/home.js";
 import Login from "./pages/login/login.js";
 import jwtDecode from "jwt-decode";
 import { useSelector } from "react-redux";
+import Territory from "./components/Territory.jsx";
+import UModal from "./components/UModal.jsx";
 
 export default function App() {
   const location = useLocation();
@@ -28,7 +30,9 @@ export default function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/admin" element={<Admin />}>
           <Route path="/admin/clients" element={<Clients />} />
-          <Route path="/admin/settings" element={<Settings />} />
+          <Route path="/admin/settings" element={<Settings />} >
+          <Route path="/admin/settings/territory" element={<Territory/>}/>
+          </Route>
         </Route>
       </Routes>
     </div>

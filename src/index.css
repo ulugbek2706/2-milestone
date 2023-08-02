@@ -5,11 +5,21 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow: hidden;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+@layer base {
+  html {
+    @apply text-neutral-800;
+  }
+  html.dark {
+    @apply text-neutral-50;
+    @apply bg-neutral-800;
+  }
 }
 
 @tailwind base;
@@ -21,4 +31,17 @@ code {
 }
 .PhoneInputInput:focus {
   outline: none;
+}
+
+.dropdownBar{
+  animation: dropdown 0.5s cubic-bezier(0.25,0.46,0.45,0.94) both;
+}
+
+@keyframes dropdown {
+  0%{
+    transform: translateY(-20px);
+  }
+  100%{
+    transform: translateY(0);
+  }
 }

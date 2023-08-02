@@ -1,11 +1,11 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-  data: null,
+  data: [],
   loading: false,
   error: null,
 };
-const reducer = createSlice({
+const dashboardSilce = createSlice({
   name: "dashboard",
   initialState,
   reducers: {
@@ -17,6 +17,6 @@ const reducer = createSlice({
   },
 });
 
-export const actions = { ...reducer.actions };
-const DashboardReducer = reducer.reducer;
+export const {getPhoneAndNumberSuccess} =dashboardSilce.actions;
+const DashboardReducer = dashboardSilce.reducer;
 export default DashboardReducer;

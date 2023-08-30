@@ -7,8 +7,10 @@ import UniversalTable from "components/universalTable/component/UniversalTable";
 import {saveTerritory, setLatitude, setLongitude, setModalVisible} from "components/territory/reducers/TerritorySlice";
 import {changeConfirmModalVisible, changeGlobalModalDispatch} from "components/universalModal/reducers/UModalSlice";
 import {changeUrl} from "components/universalTable/reducers/tableSlice";
+import {useTranslation} from "react-i18next";
 
 const Territory = () => {
+  const [t,i18n]=useTranslation("global")
   //
   const dispatch = useDispatch();
   const {
@@ -35,25 +37,25 @@ const Territory = () => {
 
   let column = [
     {
-      title: "№",
+      title: "territory.table.NO",
       key: "id",
       dataType: "number",
       show: true,
     },
     {
-      title: "Name",
+      title: "territory.table.name",
       key: "name",
       dataType: "text",
       show: true,
     },
     {
-      title: "Region",
+      title: "territory.table.region",
       key: "region",
       dataType: "text",
       show: true,
     },
     {
-      title: "Edit",
+      title: "territory.table.edit",
       key: "button",
       dataType: "jsx",
       show: true,
@@ -151,7 +153,7 @@ const handleTerritoryRodalBackdrop=()=>{
     <div className="p-1">
       <ToastContainer style={{ zIndex: "10000" }} />
       <div className="">
-        <h1 className="font-bold text-3xl">Territory</h1>
+        <h1 className="font-bold text-3xl">{t("territory.title")}</h1>
         <hr className="mt-1"/> <br />
 
         <button
@@ -159,7 +161,7 @@ const handleTerritoryRodalBackdrop=()=>{
           onClick={handleClickModal}
           ref={modalRef}
         >
-          +Add Territory
+          {t("territory.addButton")}
         </button>
 
         {modalVisible && (
@@ -169,7 +171,7 @@ const handleTerritoryRodalBackdrop=()=>{
               className="fixed inset-0 bg-gray-800 opacity-75"
             ></div>
             <div className="bg-white   rounded shadow-lg z-10">
-              <h1 className="bg-blue-900 text-white p-3 ">Add Territory</h1>
+              <h1 className="bg-blue-900 text-white p-3 ">{t("territory.addModal.title")}</h1>
 
               <div className="relative mt-4 flex gap-10 p-4">
                 <div className="flex flex-col ">
@@ -180,7 +182,7 @@ const handleTerritoryRodalBackdrop=()=>{
                       </span>
                     )}
                     <label className="flex items-center gap-1">
-                      Name:
+                      {t("territory.addModal.name")}:
                       <input
                         {...register("name", { required: "Name is required" })}
                         className="ml-4 block w-full px-4 py-2 mt-2 text-gray-900 placeholder-gray-500 border rounded-lg border-slate-500"
@@ -193,7 +195,7 @@ const handleTerritoryRodalBackdrop=()=>{
                       </span>
                     )}
                     <label className="flex items-center gap-1">
-                      Region:
+                      {t("territory.addModal.region")}:
                       <input
                         {...register("region", {
                           required: "Region is required",
@@ -203,7 +205,7 @@ const handleTerritoryRodalBackdrop=()=>{
                       />
                     </label>
                     <label className="flex ">
-                      active:
+                      {t("territory.addModal.active")}:
                       <input
                         {...register("active")}
                         className="ml-6 block mt-1 mx-1 text-gray-900 placeholder-gray-500 border rounded-lg border-slate-500"
@@ -215,7 +217,7 @@ const handleTerritoryRodalBackdrop=()=>{
                         type="submit"
                         className="absolute bottom-[28px] bg-blue-500 hover:bg-blue-700 rounded-md text-white px-4 py-2"
                       >
-                        Add
+                        {t("territory.addModal.addButton")}
                       </button>
                     </div>
                   </form>

@@ -7,13 +7,13 @@ import {
   takeLatest,
 } from "redux-saga/effects";
 import { toast } from "react-toastify";
-import ApiCall from "API/Apicall";
 import {getTeritoriesSuccess} from "components/clients/reducers/ClientSlice";
 import {
   changeCurrentTerritoryItm, getAllTerritorys, getTerritoryFailure,
   getTerritoryStart, getTerritorySuccess,
   resetTerritory
 } from "components/territory/reducers/TerritorySlice";
+import ApiCall from "../../../API/ApiCall";
 
 function* workSaveTerritory(action) {
   const tableState = yield select((state) => state.table);

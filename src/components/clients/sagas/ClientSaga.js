@@ -1,12 +1,12 @@
 import { call, put, select, takeLatest } from "redux-saga/effects";
 
 import { toast } from "react-toastify";
-import ApiCall from "API/Apicall";
 import {
   getAllCustomerCategorySuccess,
   getAllLocations,
   updateCurrentClient
 } from "components/clients/reducers/ClientSlice";
+import ApiCall from "../../../API/ApiCall";
 
 // save client
 function* workSaveClient(action) {

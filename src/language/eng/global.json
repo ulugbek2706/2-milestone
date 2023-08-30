@@ -1,0 +1,196 @@
+{
+  "section": {
+    "title": "Hello world"
+  },
+  "login": {
+    "header": "We make it easy for you",
+    "phoneNumber": "PHONE NUMBER",
+    "password": {
+      "label": "PASSWORD",
+      "placeholder": "password..."
+    },
+    "about": "About company",
+    "remember": "Remember me",
+    "support": "Support service",
+    "button": "TO COME IN"
+  },
+  "navBar": {
+    "supervisor": "Supervisor",
+    "sales": "Sales",
+    "clashRegister": "Clash register",
+    "help": "Online Help",
+    "settings": {
+      "change": "Change login and password",
+      "billing": "Billing",
+      "logout": "Log Out"
+    }
+  },
+  "menu": {
+    "plans": "Plans",
+    "applications": "Applications",
+    "stock": "Stock",
+    "clients": {
+      "clients": "Clients",
+      "clientsOnMap": "Clients on map"
+    },
+    "agents": "Agents",
+    "reports": "Reports",
+    "settings": "Settings"
+  },
+  "companyProfile": {
+    "title": "Company Profile",
+    "showHideColumn": "show/hide column",
+    "columnsOrder": "Columns Order",
+    "excel": "excel",
+    "search": "search...",
+    "table": {
+      "NO": "№",
+      "address": "Address",
+      "companyName": "Company Name",
+      "email": "Email",
+      "region": "Region",
+      "support": "Support Phone"
+    }
+  },
+  "territory": {
+    "title": "Territory",
+    "addButton": "+Add Territory",
+    "addModal": {
+      "title": "Add Territory",
+      "name": "Name",
+      "region": "Region",
+      "active": "Active",
+      "addButton": "Add"
+    },
+    "active": {
+      "all": "All",
+      "active": "Active",
+      "noActive": "No Active"
+    },
+    "showHideColumn": "show/hide column",
+    "columnsOrder": "Columns Order",
+    "search": "search...",
+    "table": {
+      "NO": "№",
+      "name": "Name",
+      "region": "Region",
+      "edit": "Edit"
+    },
+    "noData": "There is no data"
+  },
+  "customerCategory": {
+    "title": "Customer Category",
+    "addButton": "+Add Customer Category",
+    "addModal": {
+      "name": "Name",
+      "description": "Description",
+      "code": "Code",
+      "active": "Active",
+      "addButton": "save"
+    },
+    "active": {
+      "all": "All",
+      "active": "Active",
+      "noActive": "No Active"
+    },
+    "showHideColumn": "show/hide column",
+    "columnsOrder": "Columns Order",
+    "excel": "excel",
+    "search": "search...",
+    "table": {
+      "NO": "№",
+      "name": "Name",
+      "description": "Description",
+      "code": "Code",
+      "edit": "Edit"
+    },
+    "noData": "There is no data"
+  },
+  "clients": {
+    "title": "Clients",
+    "addButton": "+Add Client",
+    "addModal": {
+      "title": "Add Territory",
+      "territory": "Territory",
+      "category": "Category",
+      "name": "Name",
+      "companyName": "Company name",
+      "address": "Address",
+      "referencePoint": "Reference point",
+      "tin": "TIN",
+      "telephone": "Telephone",
+      "active": "Active",
+      "addButton": "save"
+    },
+    "filter": {
+      "territories": "Choose Territories",
+      "tin": {
+        "title":"Choose TIN",
+        "all":"All",
+        "with":"With TIN",
+        "without":"Without TIN"
+      },
+      "categories": "Choose Categories",
+      "locations": "Choose Location",
+      "inventories": "Choose Inventory",
+      "weeks": "Choose Weeks",
+      "days": "Choose Days",
+      "filterButton": "Filter"
+    },
+    "active": {
+      "all": "All",
+      "active": "Active",
+      "noActive": "No Active"
+    },
+    "showHideColumn": "show/hide column",
+    "columnsOrder": "Columns Order",
+    "excel": "excel",
+    "search": "search...",
+    "table": {
+      "NO": "№",
+      "clientName": "Name",
+      "companyName": "Company Name",
+      "telephone": "Telephone",
+      "territory": "Territory",
+      "address": "Address",
+      "referencePoint": "Reference Point",
+      "category": "Category",
+      "active": "Activity",
+      "date": "Date of registration",
+      "action": "edit"
+    },
+    "noData": "There is no data"
+  },
+  "clientsOnMap": {
+    "title": "Clients On The Map",
+    "agent": "Agent",
+    "filter": "Filter",
+    "map": "Map"
+  },
+  "confirmClose": {
+    "title": "Are you sure to leave?",
+    "description": "(* changes will be deleted!)",
+    "no": "NO",
+    "yes": "YES"
+  },
+  "table": {
+    "active": {
+      "all": "All",
+      "active": "Active",
+      "noActive": "No Active"
+    },
+    "showHideColumns": "show/hide columns",
+    "columnOrder": "Column Order",
+    "search": "search...",
+    "noData": "There is no data",
+    "columnsOrderModal": {
+      "close": "Close",
+      "save": "Save changes"
+    }
+  },
+  "yandexMap": {
+    "clear": "Clear",
+    "longitude": "Long",
+    "latitude": "Lat"
+  }
+}

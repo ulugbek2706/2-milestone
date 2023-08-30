@@ -12,8 +12,10 @@ import { useState } from "react";
 import { changeConfirmModalVisible, changeGlobalModalDispatch } from "./universalModal/reducers/UModalSlice";
 import { useEffect } from "react";
 import { changeChangedColumns, setChangedColumns } from "../redux/slices/drag/DragSlice";
+import {useTranslation} from "react-i18next";
 
 const UniversalTableModal = (props) => {
+    const [t] = useTranslation("global")
   
   const dispatch = useDispatch();
   let   columns  = useSelector((state) => state.table.columns);
@@ -82,7 +84,7 @@ const UniversalTableModal = (props) => {
             (item.show ? "" : " hidden")
           }
         >
-          {item.title}
+          {t(item.title)}
         </div>
       ))}
       <div className="flex justify-end mr-2 mt-3">
@@ -91,14 +93,14 @@ const UniversalTableModal = (props) => {
           type="button"
           className=" mx-2 bg-blue-500 hover:bg-blue-700 p-2 px-3 text-white rounded-md"
         >
-          Close
+            {t("table.columnsOrderModal.close")}
         </button>
         <button
           onClick={save}
           type="button"
           className="bg-green-500 hover:bg-green-700 p-2 px-3 text-white rounded-md"
         >
-          Save changes
+            {t("table.columnsOrderModal.save")}
         </button>
       </div>
     </div>

@@ -1,6 +1,6 @@
 import { put, takeEvery } from "redux-saga/effects";
 import { getSettingsSuccess } from "../reducers/SettingsSlice";
-import ApiCall from "API/Apicall";
+import ApiCall from "../../../API/ApiCall";
 
 function* workGetSettings() {
   try {

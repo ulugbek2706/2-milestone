@@ -1,6 +1,6 @@
 import { takeEvery, put, call } from "redux-saga/effects";
-import ApiCall from "API/Apicall";
 import {getPhoneAndNumberSuccess} from "components/navbar/reducers/DashboardSlice";
+import ApiCall from "../../../API/ApiCall";
 
 
 function* watchGetNumberAndDate() {

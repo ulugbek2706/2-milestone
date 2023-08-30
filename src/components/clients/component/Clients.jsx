@@ -8,8 +8,10 @@ import UniversalTable from "components/universalTable/component/UniversalTable";
 import UniversalRodal from "components/universalModal/component/UniversalRodal";
 import UniversalFilter from "components/universalFilter/component/UniversalFilter";
 import {setEditingData, setModalClients} from "components/clients/reducers/ClientSlice";
+import {useTranslation} from "react-i18next";
 
 const Clients = () => {
+  const [t] = useTranslation("global")
 
   const dispatch = useDispatch();
   const { territory, modalClients, customerCategory,editingData } = useSelector(
@@ -61,7 +63,7 @@ const Clients = () => {
   // rodal columns
   let clientsElement = [
     {
-      name: "Territory",
+      name: t("clients.addModal.territory"),
       key: "territory",
       type: "select",
       defValue: "-",
@@ -73,7 +75,7 @@ const Clients = () => {
       required: true,
     },
     {
-      name: "Category",
+      name: t("clients.addModal.category"),
       key: "category",
       type: "select",
       defValue: "-",
@@ -84,55 +86,55 @@ const Clients = () => {
       required: true,
     },
     {
-      name: "Name",
+      name: t("clients.addModal.name"),
       key: "name",
       type: "text",
       required: true,
     },
     {
-      name: "Company name",
+      name: t("clients.addModal.companyName"),
       key: "companyName",
       type: "text",
       required: true,
     },
     {
-      name: "Address",
+      name: t("clients.addModal.address"),
       key: "address",
       type: "text",
       required: true,
     },
     {
-      name: "Reference point",
+      name: t("clients.addModal.referencePoint"),
       key: "referencePoint",
       type: "text",
       required: true,
     },
     {
-      name: "Telephone",
+      name: t("clients.addModal.telephone"),
       key: "telephone",
       type: "tel",
       required: true,
     },
     {
-      name: "Tin",
+      name: t("clients.addModal.tin"),
       key: "tin",
       type: "text",
       required: false,
     },
     {
-      name: "active",
+      name: t("clients.addModal.active"),
       key: "active",
       type: "checkbox",
       required: false,
     },
     {
-      name: "save",
+      name: t("clients.addModal.addButton"),
       key: "save",
       type: "jsx",
       data: (
         <div className="absolute bottom-9 left-4">
         <button className="bg-green-500 text-white mt-2 ml-1 py-2 px-4 hover:bg-green-700 rounded-md">
-          save
+          {t("clients.addModal.addButton")}
         </button>
         </div>
       ),
@@ -148,55 +150,55 @@ const Clients = () => {
   // table columns
   let clientsTableColumns = [
     {
-      title: "№",
+      title: "clients.table.NO",
       key: "id",
       dataType: "number",
       show: true,
     },
     {
-      title: "Client name",
+      title: "clients.table.clientName",
       key: "name",
       dataType: "text",
       show: true,
     },
     {
-      title: "Company name",
+      title: "clients.table.companyName",
       key: "company_name",
       dataType: "text",
       show: true,
     },
     {
-      title: "Telephone",
+      title: "clients.table.telephone",
       key: "phone",
       dataType: "text",
       show: true,
     },
     {
-      title: "Territory",
+      title: "clients.table.territory",
       key: "territory",
       dataType: "text",
       show: true,
     },
     {
-      title: "Address",
+      title: "clients.table.address",
       key: "address",
       dataType: "text",
       show: true,
     },
     {
-      title: "Reference Point",
+      title: "clients.table.referencePoint",
       key: "reference_point",
       dataType: "text",
       show: true,
     },
     {
-      title: "Category",
+      title: "clients.table.category",
       key: "category",
       dataType: "text",
       show: true,
     },
     {
-      title: "Activity",
+      title: "clients.table.active",
       key: "active",
       dataType: "jsx",
       show: true,
@@ -207,13 +209,13 @@ const Clients = () => {
       ),
     },
     {
-      title: "Date of registration",
+      title: "clients.table.date",
       key: "registration_date",
       dataType: "text",
       show: true,
     },
     {
-      title: "Action",
+      title: "clients.table.action",
       key: "button",
       dataType: "jsx",
       show: true,
@@ -234,81 +236,81 @@ const Clients = () => {
 
   let filterColumns = [
     {
-      title: "Territories",
+      title: t("clients.filter.territories"),
       dataType: "multi",
       urlValue: "cities",
-      defaultValue: "Choose territories",
+      defaultValue: t("clients.filter.territories"),
       values: territory?.map((item) => ({
         label: item.name,
         value: item.id,
       })),
     },
     {
-      title: "TIN",
+      title: t("clients.filter.tin.title"),
       dataType: "select",
       urlValue: "tin",
-      defaultValue: "Choose TIN",
+      defaultValue: t("clients.filter.tin.title"),
       values: [
         
         {
-          label: "All",
+          label: t("clients.filter.tin.all"),
           value: "",
         },
         {
-          label: "With Tin",
+          label: t("clients.filter.tin.with"),
           value: true,
         },
         {
-          label: "Without Tin",
+          label: t("clients.filter.tin.without"),
           value: false,
         },
       ],
     },
     {
-      title: "Categories",
+      title: t("clients.filter.categories"),
       dataType: "multi",
       urlValue: "categories",
-      defaultValue: "Choose Categeries",
+      defaultValue: t("clients.filter.categories"),
       values: customerCategory?.map((item) => ({
         label: item.label,
         value: item.value,
       })),
     },
     {
-      title: "Days",
+      title: t("clients.filter.days"),
       dataType: "multi",
       urlValue: "day",
-      defaultValue: "Choose Days",
+      defaultValue:t("clients.filter.days"),
       // values: customerCategory?.map((item) => ({
       //   label: item.label,
       //   value: item.value,
       // })),
     },
     {
-      title: "Weeks",
+      title: t("clients.filter.weeks"),
       dataType: "multi",
       urlValue: "weeks",
-      defaultValue: "Choose Weeks",
+      defaultValue: t("clients.filter.weeks"),
       // values: customerCategory?.map((item) => ({
       //   label: item.label,
       //   value: item.value,
       // })),
     },
     {
-      title: "Location",
+      title: t("clients.filter.locations"),
       dataType: "multi",
       urlValue: "location",
-      defaultValue: "Choose Location",
+      defaultValue: t("clients.filter.locations"),
       // values: customerCategory?.map((item) => ({
       //   label: item.label,
       //   value: item.value,
       // })),
     },
     {
-      title: "With Inventory",
+      title: t("clients.filter.inventories"),
       dataType: "multi",
       urlValue: "inventories",
-      defaultValue: "Choose Inventories",
+      defaultValue: t("clients.filter.inventories"),
       // values: customerCategory?.map((item) => ({
       //   label: item.label,
       //   value: item.value,
@@ -351,7 +353,7 @@ const Clients = () => {
 
   return (
     <div className="p-1">
-      <h1 className="font-bold text-3xl px-2">Clients</h1>
+      <h1 className="font-bold text-3xl px-2">{t("clients.title")}</h1>
       <hr className="mt-1"/> <br />
       <div>
         <button
@@ -359,7 +361,7 @@ const Clients = () => {
           onClick={handleUniversalModal}
           className="bg-green-500 hover:bg-green-700 text-white  p-2 px-3 rounded-md"
         >
-          +add client
+          {t("clients.addButton")}
         </button>
       </div>
       <div >

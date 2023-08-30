@@ -13,8 +13,10 @@ import {
 import {getAllTerritorys} from "components/territory/reducers/TerritorySlice";
 import UniversalTableModal from "components/universalTableModal";
 import UniversalRodal from "components/universalModal/component/UniversalRodal";
+import {useTranslation} from "react-i18next";
 
 const UniversalTable = ({ data, columns, allData, url, locName }) => {
+  const [t] = useTranslation("global")
   // handle active
   const [isActive, setIsActive] = useState("all");
   const [selectShowValue, setSelectShowValue] = useState([]);
@@ -233,7 +235,7 @@ const UniversalTable = ({ data, columns, allData, url, locName }) => {
                 isActive === "all" ? "bg-slate-200 text-black" : "bg-white"
               } rounded-md p-2   border hover:bg-gray-100`}
             >
-              All
+              {t("table.active.all")}
             </button>
 
             <button
@@ -242,7 +244,7 @@ const UniversalTable = ({ data, columns, allData, url, locName }) => {
                 isActive === "active" ? "bg-slate-200 text-black" : "bg-white"
               } rounded-md p-2   border hover:bg-gray-100`}
             >
-              Active
+              {t("table.active.active")}
             </button>
             <button
               onClick={handleNoActive}
@@ -250,7 +252,7 @@ const UniversalTable = ({ data, columns, allData, url, locName }) => {
                 isActive === "noactive" ? "bg-slate-200 text-black" : "bg-white"
               } rounded-md p-2   border hover:bg-gray-100`}
             >
-              No active
+              {t("table.active.noActive")}
             </button>
           </div>
         )}
@@ -273,10 +275,10 @@ const UniversalTable = ({ data, columns, allData, url, locName }) => {
                 value={selectShowValue}
                 onChange={changeShow}
                 options={columns?.map((col) => ({
-                  label: col.title,
+                  label: t(col.title),
                   value: col.key,
                 }))}
-                placeholder="show/hide column"
+                placeholder={t("table.showHideColumns")}
                 isMulti
               />
             </div>
@@ -285,7 +287,7 @@ const UniversalTable = ({ data, columns, allData, url, locName }) => {
                 className="bg-gray-300 hover:bg-gray-400 hover:text-white p-2 rounded-md opacity-80"
                 onClick={() => dispatch(setColumnOrderModal(true))}
               >
-                Column Order
+                {t("table.columnOrder")}
               </button>
               <UniversalRodal
                 modalChange={columnOrderModal}
@@ -313,7 +315,7 @@ const UniversalTable = ({ data, columns, allData, url, locName }) => {
             <input
               type="search"
               className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg  block w-full p-2.5 "
-              placeholder="search..."
+              placeholder={t("table.search")}
               required
               onChange={handleInpValue}
             />
@@ -368,7 +370,7 @@ const UniversalTable = ({ data, columns, allData, url, locName }) => {
                         className="px-4 py-2 bg-gray-200 text-black"
                         key={index}
                       >
-                        {item.title}
+                        {t(item.title)}
                       </th>
                     ))}
                 </tr>
@@ -424,7 +426,7 @@ const UniversalTable = ({ data, columns, allData, url, locName }) => {
 
             {data.length === 0 && (
               <p className="text-center  mt-3 text-lg opacity-70">
-                there is no data
+                {t("table.noData")}
               </p>
             )}
           </div>

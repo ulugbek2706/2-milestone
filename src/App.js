@@ -10,10 +10,12 @@ import CustomerCategory from "./components/customerCategory/component/CustomerCa
 import NotFound from "./pages/not found/404.js";
 import ClientOnMap from "./components/clientOnMap/component/ClientOnMap.jsx";
 import { useState } from "react";
+import Language from "./Language";
 
 export default function App() {
   let pages = [
     "/",
+    "/language",
     "/admin",
     "/admin/clients",
     "/admin/map",
@@ -82,6 +84,7 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Login />} />
         <Route path="/404" element={<NotFound />} />
+        <Route path="/language" element={<Language />} />
         <Route path="/admin" element={<Admin />}>
           <Route path="/admin/clients" element={<Clients />} />
           <Route path="/admin/map" element={<ClientOnMap />} />

@@ -1,16 +1,20 @@
 import React from 'react';
 import gps from "img/gps.png";
 import question from "img/question.png";
+import {useTranslation} from "react-i18next";
 
 function NavbarMenu(props) {
+
+    const [t,i18n]=useTranslation("global")
+
     return (
         <div>
             <ul className="flex gap-12 text-white font-bold">
-                <li className="my-auto cursor-pointer">Supervisor</li>
-                <li className="my-auto cursor-pointer">Sales</li>
+                <li className="my-auto cursor-pointer">{t("navBar.supervisor")}</li>
+                <li className="my-auto cursor-pointer">{t("navBar.sales")}</li>
                 <li className="my-auto cursor-pointer">
                     <select className="bg-gray-600 cursor-pointer" name="" id="">
-                        <option value="">Clash register</option>
+                        <option value="">{t("navBar.clashRegister")}</option>
                     </select>
                 </li>
                 <li className="flex my-auto cursor-pointer">
@@ -25,7 +29,7 @@ function NavbarMenu(props) {
                         src={question}
                         alt="question"
                     />
-                    <p>Online Help</p>
+                    <p>{t("navBar.help")}</p>
                 </li>
             </ul>
         </div>

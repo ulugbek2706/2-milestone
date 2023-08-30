@@ -13,8 +13,11 @@ import {
 } from "./territory/reducers/TerritorySlice";
 import { updateCurrentClient } from "./clients/reducers/ClientSlice";
 import { changeCurrentCustomerCategory } from "./customerCategory/reducers/CustomerCategorySlice";
+import {useTranslation} from "react-i18next";
 
 const ConfirmClose = () => {
+  const [t,i18n]=useTranslation("global")
+
   const confirmModalVisible = useSelector(
     (state) => state.uModal.confirmModalVisible
   );
@@ -53,21 +56,21 @@ const ConfirmClose = () => {
         aria-describedby="alert-dialog-description"
       >
         <DialogTitle id="alert-dialog-title">
-          {"Are you sure to leave?"}
+          {t("confirmClose.title")}
         </DialogTitle>
         <DialogContent className="text-center">
-          <h1 className="text-md text-red-600">(* changes will be deleted!)</h1>
+          <h1 className="text-md text-red-600">{t("confirmClose.description")}</h1>
         </DialogContent>
         <DialogActions>
           <Button color="error" onClick={(e) => handleClose(e, "yoq")}>
-            no
+            {t("confirmClose.no")}
           </Button>
           <Button
             color="success"
             onClick={(e) => handleClose(e, "ha")}
             autoFocus
           >
-            yes
+            {t("confirmClose.yes")}
           </Button>
         </DialogActions>
       </Dialog>

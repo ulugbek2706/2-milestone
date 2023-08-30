@@ -10,6 +10,7 @@ import ClientReducer from "components/clients/reducers/ClientSlice";
 import CustumerCategoryReducer from "components/customerCategory/reducers/CustomerCategorySlice";
 import CompanyProfileReducer from "components/componyProfile/reducers/CompanyProfileSlice";
 import DragReducer from "./drag/DragSlice"
+import LanguageReducer from "./LanguageReducer";
 
 const rootReducer = combineReducers({
   // Add more reducers here if needed
@@ -23,7 +24,8 @@ const rootReducer = combineReducers({
   client: ClientReducer,
   customerCategory:CustumerCategoryReducer,
   companyProfile:CompanyProfileReducer,
-  drag:DragReducer
+  drag:DragReducer,
+  language:LanguageReducer
 });
 
 export default rootReducer;

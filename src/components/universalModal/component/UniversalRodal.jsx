@@ -149,7 +149,7 @@ const UniversalRodal = (props) => {
                                     <input
                                       className="block px-2 py-2 mr-1 text-gray-900 placeholder-gray-500 border rounded-lg border-slate-500"
                                       type={item.type}
-                                      placeholder={item.key + "..."}
+                                      placeholder={item.name + "..."}
                                       {...register(
                                         item?.key,
                                         item?.required && {
@@ -162,7 +162,7 @@ const UniversalRodal = (props) => {
                                       <input
                                         className="block px-2 py-2 mr-1 text-gray-900 placeholder-gray-500 border rounded-lg border-slate-500"
                                         type={item.type}
-                                        placeholder={item.key + "..."}
+                                        placeholder={item.name + "..."}
                                         {...register(
                                           item?.key,
                                           item?.required && {

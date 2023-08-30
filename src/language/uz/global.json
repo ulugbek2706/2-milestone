@@ -1,0 +1,196 @@
+{
+    "section": {
+        "title": "Salom, dunyo"
+    },
+    "login": {
+        "header": "Siz uchun osonlik yaratamiz",
+        "phoneNumber": "TELEFON RAQAMI",
+        "password": {
+            "label": "PAROL",
+            "placeholder": "parol..."
+        },
+        "about": "Kompaniya haqida",
+        "remember": "Meni eslab qol",
+        "support": "Yordam xizmati",
+        "button": "KIRISH"
+    },
+    "navBar": {
+        "supervisor": "Nazoratchi",
+        "sales": "Sotish",
+        "clashRegister": "To'lovlar ro'yxati",
+        "help": "Onlayn yordam",
+        "settings": {
+            "change": "Login va parolni o'zgartirish",
+            "billing": "Hisob-kitob",
+            "logout": "Chiqish"
+        }
+    },
+    "menu": {
+        "plans": "Rejalashtirishlar",
+        "applications": "Arizalar",
+        "stock": "Savdo",
+        "clients": {
+            "clients": "Mijozlar",
+            "clientsOnMap": "Mijozlar xaritada"
+        },
+        "agents": "Agentlar",
+        "reports": "Hisobotlar",
+        "settings": "Sozlamalar"
+    },
+    "companyProfile": {
+        "title": "Kompaniya Profili",
+        "showHideColumn": "ustunni ko'rsat/berish",
+        "columnsOrder": "Ustun tartibi",
+        "excel": "Excel",
+        "search": "qidirish...",
+        "table": {
+            "NO": "№",
+            "address": "Manzil",
+            "companyName": "Kompaniya nomi",
+            "email": "Elektron pochta",
+            "region": "Viloyat",
+            "support": "Yordam telefon raqami"
+        }
+    },
+    "territory": {
+        "title": "Hudud",
+        "addButton": "+Hudud qo'shish",
+        "addModal": {
+            "title": "Hudud qo'shish",
+            "name": "Nomi",
+            "region": "Viloyat",
+            "active": "Faol",
+            "addButton": "Qo'shish"
+        },
+        "active": {
+            "all": "Hammasi",
+            "active": "Faol",
+            "noActive": "Faol emas"
+        },
+        "showHideColumn": "ustunni ko'rsat/berish",
+        "columnsOrder": "Ustun tartibi",
+        "search": "qidirish...",
+        "table": {
+            "NO": "№",
+            "name": "Nomi",
+            "region": "Viloyat",
+            "edit": "Tahrirlash"
+        },
+        "noData": "Ma'lumot mavjud emas"
+    },
+    "customerCategory": {
+        "title": "Mijoz Kategoriyalari",
+        "addButton": "+Mijoz kategoriyasi qo'shish",
+        "addModal": {
+            "name": "Nomi",
+            "description": "Tavsif",
+            "code": "Kod",
+            "active": "Faol",
+            "addButton": "saqlash"
+        },
+        "active": {
+            "all": "Hammasi",
+            "active": "Faol",
+            "noActive": "Faol emas"
+        },
+        "showHideColumn": "ustunni ko'rsat/berish",
+        "columnsOrder": "Ustun tartibi",
+        "excel": "Excel",
+        "search": "qidirish...",
+        "table": {
+            "NO": "№",
+            "name": "Nomi",
+            "description": "Tavsif",
+            "code": "Kod",
+            "edit": "Tahrirlash"
+        },
+        "noData": "Ma'lumot mavjud emas"
+    },
+    "clients": {
+        "title": "Mijozlar",
+        "addButton": "+Mijoz qo'shish",
+        "addModal": {
+            "title": "Hudud qo'shish",
+            "territory": "Hudud",
+            "category": "Kategoriya",
+            "name": "Ism",
+            "companyName": "Kompaniya nomi",
+            "address": "Manzil",
+            "referencePoint": "Ma'lumot markazi",
+            "telephone": "Telefon",
+            "tin": "STIR",
+            "active": "Faol",
+            "addButton": "saqlash"
+        },
+        "filter": {
+            "territories": "Hududlarni tanlash",
+            "tin": {
+                "title": "STIRni tanlang",
+                "all": "Hammasi",
+                "with": "STIR bilan",
+                "without": "STIRsiz"
+            },
+            "categories": "Kategoriyalarni tanlash",
+            "locations": "Manzillarni tanlash",
+            "inventories": "Inventarlar",
+            "weeks": "Haftalarni tanlash",
+            "days": "Kunlarni tanlash",
+            "filterButton": "Filtrlash"
+        },
+        "active": {
+            "all": "Hammasi",
+            "active": "Faol",
+            "noActive": "Faol emas"
+        },
+        "showHideColumn": "ustunni ko'rsat/berish",
+        "columnsOrder": "Ustun tartibi",
+        "excel": "Excel",
+        "search": "qidirish...",
+        "table": {
+            "NO": "№",
+            "clientName": "Ism",
+            "companyName": "Kompaniya Nomi",
+            "telephone": "Telefon",
+            "territory": "Hudud",
+            "address": "Manzil",
+            "referencePoint": "Ma'lumot Markazi",
+            "category": "Kategoriya",
+            "active": "Faollik",
+            "date": "Ro'yxatga olingan sana",
+            "action": "Harakat"
+        },
+        "noData": "Ma'lumot mavjud emas"
+    },
+    "clientsOnMap": {
+        "title": "Mijozlar Xaritada",
+        "agent": "Agent",
+        "filter": "Filtr",
+        "map": "Xarita"
+    },
+    "confirmClose": {
+        "title": "Chiqishni istaysizmi?",
+        "description": "(* o'zgarishlar o'chiriladi!)",
+        "no": "YO'Q",
+        "yes": "HA"
+    },
+    "table": {
+        "active": {
+            "all": "Hammasi",
+            "active": "Faol",
+            "noActive": "Faol emas"
+        },
+        "showHideColumns": "ustunlarni ko'rsat/yashir",
+        "columnOrder": "Ustun tartibi",
+        "search": "qidirish...",
+        "noData": "Ma'lumot mavjud emas",
+        "columnsOrderModal": {
+            "close": "Yopish",
+            "save": "O'zgarishlarni saqlash"
+        }
+    },
+    "yandexMap": {
+        "clear": "Tozalash",
+        "longitude": "Bo'ylam",
+        "latitude": "Kenglik"
+    }
+}

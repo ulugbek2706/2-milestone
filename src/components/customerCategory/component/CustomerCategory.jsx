@@ -8,8 +8,10 @@ import { useForm } from "react-hook-form";
 import UniversalRodal from "components/universalModal/component/UniversalRodal";
 import UniversalTable from "components/universalTable/component/UniversalTable";
 import {changeUrl} from "components/universalTable/reducers/tableSlice";
+import {useTranslation} from "react-i18next";
 
 const CustomerCategory = () => {
+  const [t] = useTranslation("global")
   const {
     modalCustomer,
     editData,
@@ -25,67 +27,67 @@ const CustomerCategory = () => {
 
   let customerCategoryColumns = [
     {
-      name: "name",
+      name: t("customerCategory.addModal.name"),
       key: "name",
       type: "text",
       required: true,
     },
     {
-      name: "description",
+      name: t("customerCategory.addModal.description"),
       key: "description",
       type: "text",
       required: true,
     },
     {
-      name: "code",
+      name: t("customerCategory.addModal.code"),
       key: "code",
       type: "text",
       required: true,
     },
     {
-      name: "active",
+      name: t("customerCategory.addModal.active"),
       key: "active",
       type: "checkbox",
       required: false,
     },
     {
-      name: "save",
+      name: t("customerCategory.addModal.save"),
       key: "button",
       type: "jsx",
       data: (
         <button className="bg-green-500 text-white mt-2 mr-20 py-2 px-4 hover:bg-green-700 rounded-md">
-          save
+          {t("customerCategory.addModal.save")}
         </button>
       ),
     },
   ];
   let customerCategoryTableColumns = [
     {
-      title: "№",
+      title: "customerCategory.table.NO",
       key: "id",
       dataType: "number",
       show: true,
     },
     {
-      title: "Name",
+      title: "customerCategory.table.name",
       key: "name",
       dataType: "text",
       show: true,
     },
     {
-      title: "Description",
+      title: "customerCategory.table.description",
       key: "description",
       dataType: "text",
       show: true,
     },
     {
-      title: "code",
+      title: "customerCategory.table.code",
       key: "code",
       dataType: "text",
       show: true,
     },
     {
-      title: "Edit",
+      title: "customerCategory.table.edit",
       key: "button",
       dataType: "jsx",
       show: true,
@@ -148,13 +150,13 @@ const CustomerCategory = () => {
 
   return (
     <div>
-      <h1 className="font-bold text-3xl">Customer Category</h1>
+      <h1 className="font-bold text-3xl">{t("customerCategory.title")}</h1>
       <hr className="mt-1"/> <br />
       <button
         onClick={() => dispatch(setCustomerModal(true))}
         className="bg-green-500 hover:bg-green-700 text-white px-4 py-2 rounded-md"
       >
-        +Add Customer Category
+        {t("customerCategory.addButton")}
       </button>
       <UniversalRodal
         url={"customerCategory"}

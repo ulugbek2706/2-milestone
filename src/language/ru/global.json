@@ -1,0 +1,196 @@
+{
+  "section": {
+    "title": "Привет, мир"
+  },
+  "login": {
+    "header": "Мы делаем это легко для вас",
+    "phoneNumber": "НОМЕР ТЕЛЕФОНА",
+    "password": {
+      "label": "ПАРОЛЬ",
+      "placeholder": "пароль..."
+    },
+    "about": "О компании",
+    "remember": "Запомнить меня",
+    "support": "Служба поддержки",
+    "button": "ВОЙТИ"
+  },
+  "navBar": {
+    "supervisor": "Надзиратель",
+    "sales": "Продажи",
+    "clashRegister": "Реестр столкновений",
+    "help": "Онлайн помощь",
+    "settings": {
+      "change": "Изменить логин и пароль",
+      "billing": "Биллинг",
+      "logout": "Выйти"
+    }
+  },
+  "menu": {
+    "plans": "Планы",
+    "applications": "Заявки",
+    "stock": "Склад",
+    "clients": {
+      "clients": "Клиенты",
+      "clientsOnMap": "Клиенты на карте"
+    },
+    "agents": "Агенты",
+    "reports": "Отчеты",
+    "settings": "Настройки"
+  },
+  "companyProfile": {
+    "title": "Профиль компании",
+    "showHideColumn": "показать/скрыть колонку",
+    "columnsOrder": "Порядок колонок",
+    "excel": "эксель",
+    "search": "поиск...",
+    "table": {
+      "NO": "№",
+      "address": "Адрес",
+      "companyName": "Название компании",
+      "email": "Электронная почта",
+      "region": "Регион",
+      "support": "Телефон поддержки"
+    }
+  },
+  "territory": {
+    "title": "Территория",
+    "addButton": "+Добавить территорию",
+    "addModal": {
+      "title": "Добавить территорию",
+      "name": "Название",
+      "region": "Регион",
+      "active": "Активно",
+      "addButton": "Добавить"
+    },
+    "active": {
+      "all": "Все",
+      "active": "Активно",
+      "noActive": "Не активно"
+    },
+    "showHideColumn": "показать/скрыть колонку",
+    "columnsOrder": "Порядок колонок",
+    "search": "поиск...",
+    "table": {
+      "NO": "№",
+      "name": "Название",
+      "region": "Регион",
+      "edit": "Редактировать"
+    },
+    "noData": "Нет данных"
+  },
+  "customerCategory": {
+    "title": "Категория клиентов",
+    "addButton": "+Добавить категорию клиентов",
+    "addModal": {
+      "name": "Название",
+      "description": "Описание",
+      "code": "Код",
+      "active": "Активно",
+      "addButton": "сохранить"
+    },
+    "active": {
+      "all": "Все",
+      "active": "Активно",
+      "noActive": "Не активно"
+    },
+    "showHideColumn": "показать/скрыть колонку",
+    "columnsOrder": "Порядок колонок",
+    "excel": "эксель",
+    "search": "поиск...",
+    "table": {
+      "NO": "№",
+      "name": "Название",
+      "description": "Описание",
+      "code": "Код",
+      "edit": "Редактировать"
+    },
+    "noData": "Нет данных"
+  },
+  "clients": {
+    "title": "Клиенты",
+    "addButton": "+Добавить клиента",
+    "addModal": {
+      "title": "Добавить территорию",
+      "territory": "Территория",
+      "category": "Категория",
+      "name": "Имя",
+      "companyName": "Название компании",
+      "address": "Адрес",
+      "referencePoint": "Ориентир",
+      "telephone": "Телефон",
+      "active": "Активно",
+      "addButton": "сохранить",
+      "tin": "ИНН"
+    },
+    "filter": {
+      "territories": "Выбрать территории",
+      "categories": "Выбрать категории",
+      "locations": "Выбрать местоположения",
+      "inventories": "Выбрать инвентарь",
+      "weeks": "Выбрать недели",
+      "days": "Выбрать дни",
+      "filterButton": "Фильтр",
+      "tin": {
+        "title": "Выберите ИНН",
+        "all": "Все",
+        "with": "С ИНН",
+        "without": "Без ИНН"
+      }
+    },
+    "active": {
+      "all": "Все",
+      "active": "Активно",
+      "noActive": "Не активно"
+    },
+    "showHideColumn": "показать/скрыть колонку",
+    "columnsOrder": "Порядок колонок",
+    "excel": "эксель",
+    "search": "поиск...",
+    "table": {
+      "NO": "№",
+      "clientName": "Имя",
+      "companyName": "Название компании",
+      "telephone": "Телефон",
+      "territory": "Территория",
+      "address": "Адрес",
+      "referencePoint": "Ориентир",
+      "category": "Категория",
+      "active": "Активность",
+      "date": "Дата регистрации",
+      "action": "редактировать"
+    },
+    "noData": "Нет данных"
+  },
+  "clientsOnMap": {
+    "title": "Клиенты на карте",
+    "agent": "Агент",
+    "filter": "Фильтр",
+    "map": "Карта"
+  },
+  "confirmClose": {
+    "title": "Вы уверены, что хотите уйти?",
+    "description": "(* изменения будут удалены!)",
+    "no": "НЕТ",
+    "yes": "ДА"
+  },
+  "table": {
+    "active": {
+      "all": "Все",
+      "active": "Активно",
+      "noActive": "Не активно"
+    },
+    "showHideColumns": "показать/скрыть колонки",
+    "columnOrder": "Порядок колонок",
+    "search": "поиск...",
+    "noData": "Нет данных",
+    "columnsOrderModal": {
+      "close": "Закрыть",
+      "save": "Сохранить изменения"
+    }
+  },
+  "yandexMap": {
+    "clear": "Очистить",
+    "longitude": "Долгота",
+    "latitude": "Широта"
+  }
+}

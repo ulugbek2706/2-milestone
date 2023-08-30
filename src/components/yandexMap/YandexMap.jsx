@@ -13,8 +13,10 @@ import {
   SearchControl,
 } from "react-yandex-maps";
 import {setLatitude, setLongitude} from "components/territory/reducers/TerritorySlice";
+import {useTranslation} from "react-i18next";
 
 const YandexMap = () => {
+  const [t] = useTranslation("global")
   const [template, setTemplate] = useState(null);
   const [mapState, setMapState] = useState([]);
   const dispatch = useDispatch();
@@ -64,7 +66,7 @@ const YandexMap = () => {
       <div>
         <div className="flex gap-5">
           <label>
-            Lat:
+            {t("yandexMap.latitude")}:
             <input
               disabled
               value={latitude}
@@ -73,7 +75,7 @@ const YandexMap = () => {
             />
           </label>
           <label>
-            Long:
+            {t("yandexMap.longitude")}:
             <input
               disabled
               value={longitude}
@@ -86,7 +88,7 @@ const YandexMap = () => {
           onClick={handleClear}
           className="bg-red-500 hover:bg-red-700 text-white rounded-md px-5 py-2 my-3"
         >
-          Clear
+          {t("yandexMap.clear")}
         </button>
       </div>
     </YMaps>

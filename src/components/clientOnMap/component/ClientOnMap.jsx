@@ -11,8 +11,10 @@ import {
   YMaps,
   ZoomControl,
 } from "react-yandex-maps";
+import {useTranslation} from "react-i18next";
 
 export default function ClientOnMap() {
+  const [t] = useTranslation("global")
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -34,18 +36,18 @@ export default function ClientOnMap() {
         <div className="w-1/5">
           <div className="bg-gray-200 h-[100vh] flex flex-col items-center">
             <div className="bg-orange-500 w-[92%] p-4 text-center mt-1">
-              <h2 className="text-white font-bold">Clients of map</h2>
+              <h2 className="text-white font-bold">{t("clientsOnMap.title")}</h2>
             </div>
 
             <div
               className={`bg-blue-400 text-white   p-2 text-center w-[92%] my-1 cursor-pointer hover:bg-blue-700  transform  transition-all duration-300`}
-            >Agent</div>
+            >{t("clientsOnMap.agent")}</div>
             <div
               className={`bg-blue-400 text-white   p-2 text-center w-[92%] my-1 cursor-pointer hover:bg-blue-700  transform  transition-all duration-300`}
-            >Filter</div>
+            >{t("clientsOnMap.filter")}</div>
             <div
               className={`bg-blue-400 text-white   p-2 text-center w-[92%] my-1 cursor-pointer hover:bg-blue-700  transform  transition-all duration-300`}
-            >Map</div>
+            >{t("clientsOnMap.map")}</div>
           </div>
         </div>
         <div className=" w-4/5">

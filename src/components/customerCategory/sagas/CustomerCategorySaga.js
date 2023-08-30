@@ -2,8 +2,8 @@ import {  call, put, select, takeLatest } from "redux-saga/effects";
 
 
 import { toast } from "react-toastify";
-import ApiCall from "API/Apicall";
 import {changeCurrentCustomerCategory} from "components/customerCategory/reducers/CustomerCategorySlice";
+import ApiCall from "../../../API/ApiCall";
 
 function* workSaveCustomerCategory(action) {
   

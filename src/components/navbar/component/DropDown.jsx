@@ -4,8 +4,10 @@ import key from "img/key.png";
 import billing from "img/billing.png";
 import exit from "img/exit.png";
 import { useNavigate } from "react-router-dom";
+import {useTranslation} from "react-i18next";
 
 const DropDown = () => {
+  const [t] = useTranslation("global")
   const [isOpen, setIsOpen] = useState(false);
   const dropdownRef = useRef(null);
   const navigate = useNavigate();
@@ -45,17 +47,17 @@ const DropDown = () => {
           <div className="absolute z-50 top-14 right-[-18px] w-[300px] bg-white shadow-lg shadow-gray-800 rounded dropdownBar">
             {/* Add dropdown options here */}
             <p className="flex items-center gap-2 px-4 py-2 cursor-pointer hover:bg-gray-400 hover:text-white">
-              <img className="w-5 h-5" src={key} alt="" /> Change login and
-              password
+              <img className="w-5 h-5" src={key} alt="" />
+              {t("navBar.settings.change")}
             </p>
             <p className="flex items-center gap-2 px-4 py-2 cursor-pointer hover:bg-gray-400 hover:text-white">
-              <img className="w-5 h-5" src={billing} alt="" /> Biling
+              <img className="w-5 h-5" src={billing} alt="" /> {t("navBar.settings.billing")}
             </p>
             <p
               onMouseDown={handleLogOut}
               className="flex items-center gap-2 px-4 py-2 cursor-pointer hover:bg-gray-400 hover:text-white"
             >
-              <img className="w-5 h-5" src={exit} alt="" /> Log Out
+              <img className="w-5 h-5" src={exit} alt="" /> {t("navBar.settings.logout")}
             </p>
           </div>
         )}

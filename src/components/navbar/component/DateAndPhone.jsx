@@ -2,6 +2,8 @@ import React, {useEffect} from 'react';
 import date from "img/calendar.png";
 import {useDispatch, useSelector} from "react-redux";
 import {fetchPhoneAndNumber} from "components/navbar/reducers/DashboardSlice";
+import {useTranslation} from "react-i18next";
+import {changeLanguage} from "../../../redux/slices/LanguageReducer";
 
 function DateAndPhone(props) {
     const dispatch = useDispatch();
@@ -10,6 +12,20 @@ function DateAndPhone(props) {
     useEffect(() => {
         dispatch(fetchPhoneAndNumber());
     }, [dispatch]);
+
+    const [t,i18n]=useTranslation("global")
+    const selectedLanguage = useSelector((state) => state.language.selectedLanguage);
+
+    useEffect(() => {
+        i18n.changeLanguage(selectedLanguage);
+        localStorage.setItem("language", selectedLanguage);
+    }, [selectedLanguage]);
+
+    const handleChange =(e)=>{
+        localStorage.setItem("language",e.target.value)
+        dispatch(changeLanguage(e.target.value))
+    }
+
     return (
         <div>
             {data && (
@@ -21,6 +37,13 @@ function DateAndPhone(props) {
                     <p className="font-bold text-md">{data.supportPhone}</p>
                 </div>
             )}
+            <div>
+                <select defaultValue={selectedLanguage} onChange={handleChange}>
+                    <option value="uzb">UZB</option>
+                    <option value="eng">ENG</option>
+                    <option value="rus">RUS</option>
+                </select>
+            </div>
         </div>
     );
 }

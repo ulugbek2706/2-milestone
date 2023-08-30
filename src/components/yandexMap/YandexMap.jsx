@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { setLatitude,setLongitude} from "../../redux/slices/Territory/TerritorySlice";
+
 import {
   YMaps,
   Map,
@@ -12,14 +12,13 @@ import {
   TypeSelector,
   SearchControl,
 } from "react-yandex-maps";
+import {setLatitude, setLongitude} from "components/territory/reducers/TerritorySlice";
 
 const YandexMap = () => {
   const [template, setTemplate] = useState(null);
   const [mapState, setMapState] = useState([]);
-  // const [latitude, setLatitude] = useState("");
-  // const [longitude, setLongitude] = useState("");
-  const dispatch =useDispatch()
-  const {latitude,longitude}=useSelector((state)=>state.territory)
+  const dispatch = useDispatch();
+  const { latitude, longitude } = useSelector((state) => state.territory);
 
   const handleMapClick = (event) => {
     const coords = event.get("coords");
@@ -31,10 +30,10 @@ const YandexMap = () => {
     setMapState({ center: [latitude, longitude], zoom: 10 });
   };
 
-  const handleClear =()=>{
+  const handleClear = () => {
     dispatch(setLatitude(""));
-    dispatch(setLongitude(""))
-  }
+    dispatch(setLongitude(""));
+  };
   return (
     <YMaps
       query={{
@@ -43,10 +42,10 @@ const YandexMap = () => {
         coordorder: "latlong",
       }}
     >
-      <div>
+      <div className="w-full">
         <Map
-          width={500}
-          height={500}
+          width={510}
+          height={330}
           onClick={handleMapClick} // Add the click event listener
           defaultState={{
             center: [39.767966, 64.421728],
@@ -83,7 +82,10 @@ const YandexMap = () => {
             />
           </label>
         </div>
-        <button onClick={handleClear} className="bg-red-500 text-white rounded-md px-5 py-2 my-3">
+        <button
+          onClick={handleClear}
+          className="bg-red-500 hover:bg-red-700 text-white rounded-md px-5 py-2 my-3"
+        >
           Clear
         </button>
       </div>

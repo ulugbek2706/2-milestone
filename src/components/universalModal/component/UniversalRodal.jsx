@@ -45,7 +45,6 @@ const UniversalRodal = (props) => {
   }, [props.modalChange]);
 
   const mySubmit = (data) => {
-    console.log(data);
     if (props.url === "client") {
       if (longitude && latitude) {
         if (

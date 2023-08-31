@@ -135,7 +135,7 @@
             "inventories": "Inventarlar",
             "weeks": "Haftalarni tanlash",
             "days": "Kunlarni tanlash",
-            "filterButton": "Filtrlash"
+            "filterButton": "Filtr"
         },
         "active": {
             "all": "Hammasi",
@@ -178,6 +178,9 @@
             "all": "Hammasi",
             "active": "Faol",
             "noActive": "Faol emas"
+        },
+        "limit": {
+            "all": "Hammasi"
         },
         "showHideColumns": "ustunlarni ko'rsat/yashir",
         "columnOrder": "Ustun tartibi",

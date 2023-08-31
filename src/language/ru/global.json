@@ -179,6 +179,9 @@
       "active": "Активно",
       "noActive": "Не активно"
     },
+    "limit": {
+      "all": "Все"
+    },
     "showHideColumns": "показать/скрыть колонки",
     "columnOrder": "Порядок колонок",
     "search": "поиск...",

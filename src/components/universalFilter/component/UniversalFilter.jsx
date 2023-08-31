@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import Select from "react-select";
 import {setCurrentPage} from "components/universalTable/reducers/tableSlice";
 import {saveFilterMap, sendFilterAxiosUrl} from "components/universalFilter/reducers/filterSlice";
+import {useTranslation} from "react-i18next";
 
 const UniversalFilter = ({
   columns,
@@ -12,6 +13,7 @@ const UniversalFilter = ({
   active,
   selectRef,
 }) => {
+  const [t] = useTranslation("global")
   const dispatch = useDispatch();
   const mapData = useSelector((state) => state.filter.mapData);
   const searchInpValue = useSelector((state) => state.table.searchInpValue);
@@ -72,7 +74,7 @@ const UniversalFilter = ({
           onClick={showFilter}
           className="w-[80px] my-2 h-[40px] cursor-pointer  bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded "
         >
-          Filter
+          {t("clients.filter.filterButton")}
         </button>
       </div>
     </div>

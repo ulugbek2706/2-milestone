@@ -72,7 +72,7 @@ const UniversalTable = ({ data, columns, allData, url, locName }) => {
   }, []);
 
   const options = [
-    { value: -1, label: "ALL" },
+    { value: -1, label: t("table.limit.all") },
     { value: 5, label: 5 },
     { value: 10, label: 10 },
     { value: 20, label: 20 },

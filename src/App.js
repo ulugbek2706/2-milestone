@@ -11,6 +11,7 @@ import NotFound from "./pages/not found/404.js";
 import ClientOnMap from "./components/clientOnMap/component/ClientOnMap.jsx";
 import { useState } from "react";
 import Language from "./Language";
+import WebApp from "components/web-app/component/web-app";
 
 export default function App() {
   let pages = [
@@ -23,6 +24,7 @@ export default function App() {
     "/admin/settings/territory",
     "/admin/settings/company_profile",
     "/admin/settings/customer_category",
+      "/webapp"
   ];
 
   const navigate = useNavigate();
@@ -84,6 +86,7 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Login />} />
         <Route path="/404" element={<NotFound />} />
+        <Route path="/webapp" element={<WebApp />} />
         <Route path="/language" element={<Language />} />
         <Route path="/admin" element={<Admin />}>
           <Route path="/admin/clients" element={<Clients />} />

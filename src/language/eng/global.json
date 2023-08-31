@@ -179,6 +179,9 @@
       "active": "Active",
       "noActive": "No Active"
     },
+    "limit": {
+      "all": "All"
+    },
     "showHideColumns": "show/hide columns",
     "columnOrder": "Column Order",
     "search": "search...",

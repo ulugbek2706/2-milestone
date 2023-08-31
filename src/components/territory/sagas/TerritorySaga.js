@@ -13,7 +13,7 @@ import {
   getTerritoryStart, getTerritorySuccess,
   resetTerritory
 } from "components/territory/reducers/TerritorySlice";
-import ApiCall from "../../../API/ApiCall";
+import ApiCall from "API/ApiCall";
 
 function* workSaveTerritory(action) {
   const tableState = yield select((state) => state.table);

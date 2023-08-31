@@ -1,7 +1,6 @@
 import { put, takeEvery } from "redux-saga/effects";
 import { getSettingsSuccess } from "../reducers/SettingsSlice";
-import ApiCall from "../../../API/ApiCall";
-
+import ApiCall from "API/ApiCall";
 function* workGetSettings() {
   try {
     const response = yield ApiCall("/api/settings", "GET");

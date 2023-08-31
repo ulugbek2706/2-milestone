@@ -1,6 +1,6 @@
 import { call, put, takeLatest } from "redux-saga/effects";
 import {getDataFailure, getDataStart, getDataSuccess} from "components/universalTable/reducers/tableSlice";
-import ApiCall from "../../../API/ApiCall";
+import ApiCall from "API/ApiCall";
 
 // fake backend tested
 function* watchGetData() {

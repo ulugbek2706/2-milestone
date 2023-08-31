@@ -1,5 +1,5 @@
 import axios from "axios";
-import {BASE_URL, clearLocalStorageItem} from "../config/constans";
+import {BASE_URL, clearLocalStorageItem} from "config/constans";
 function ApiCall(url, method, data, params, responseType) {
   const token = localStorage.getItem("access_token");
 

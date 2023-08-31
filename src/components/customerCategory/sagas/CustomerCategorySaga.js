@@ -3,8 +3,7 @@ import {  call, put, select, takeLatest } from "redux-saga/effects";
 
 import { toast } from "react-toastify";
 import {changeCurrentCustomerCategory} from "components/customerCategory/reducers/CustomerCategorySlice";
-import ApiCall from "../../../API/ApiCall";
-
+import ApiCall from "API/ApiCall";
 function* workSaveCustomerCategory(action) {
   
   const currentStates = yield select((state) => state.customerCategory);

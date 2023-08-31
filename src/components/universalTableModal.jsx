@@ -11,7 +11,7 @@ import {
 import { useState } from "react";
 import { changeConfirmModalVisible, changeGlobalModalDispatch } from "./universalModal/reducers/UModalSlice";
 import { useEffect } from "react";
-import { changeChangedColumns, setChangedColumns } from "../redux/slices/drag/DragSlice";
+import { changeChangedColumns, setChangedColumns } from "redux/slices/drag/DragSlice";
 import {useTranslation} from "react-i18next";
 
 const UniversalTableModal = (props) => {

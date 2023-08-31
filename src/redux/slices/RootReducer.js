@@ -11,6 +11,7 @@ import CustumerCategoryReducer from "components/customerCategory/reducers/Custom
 import CompanyProfileReducer from "components/componyProfile/reducers/CompanyProfileSlice";
 import DragReducer from "./drag/DragSlice"
 import LanguageReducer from "./LanguageReducer";
+import ClientOnMapReducer from "components/clientOnMap/reducers/clientOnMapSlice";
 
 const rootReducer = combineReducers({
   // Add more reducers here if needed
@@ -25,7 +26,8 @@ const rootReducer = combineReducers({
   customerCategory:CustumerCategoryReducer,
   companyProfile:CompanyProfileReducer,
   drag:DragReducer,
-  language:LanguageReducer
+  language:LanguageReducer,
+  clientonmap:ClientOnMapReducer
 });
 
 export default rootReducer;

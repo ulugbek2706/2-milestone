@@ -8,6 +8,7 @@ import { clientSaga } from "components/clients/sagas/ClientSaga";
 import {CustomerCategorySaga} from "components/customerCategory/sagas/CustomerCategorySaga"
 import {settingsSaga} from "components/settings/sagas/SettingsSaga"
 import {companyProfileSaga} from "components/componyProfile/sagas/CompanyProfileSaga"
+import {clientonmapSaga} from "components/clientOnMap/sagas/clientOnMapSaga";
 
 export function* rootSaga() {
   yield all([
@@ -19,6 +20,7 @@ export function* rootSaga() {
     fork(clientSaga),
     fork(CustomerCategorySaga),
     fork(settingsSaga),
-    fork(companyProfileSaga)
+    fork(companyProfileSaga),
+    fork(clientonmapSaga)
   ]);
 }

@@ -33,16 +33,20 @@ export const clientSlice = createSlice({
       tin:"",
       active: "",
       }
-      
-      
       state.modalClients = action.payload;
     },
     getAllCustomerCategorySuccess:(state,action)=>{
       state.customerCategory=action.payload
     },
-
-    getAllLocations:(state,action)=>{
-      state.allLocations=action.payload
+    getAllLocationsStart: (state, action) => {
+      state.isLoading = true;
+    },
+    getAllLocationsSuccess: (state, action) => {
+      state.allLocations = action.payload
+      state.isLoading = false
+    },
+    getAllLocationsFailure: (state, action) => {
+      state.isLoading = false
     },
     setEditingData:(state, action) => {
       state.editingData = action.payload
@@ -52,6 +56,14 @@ export const clientSlice = createSlice({
   }
   },
 });
-export const { getTeritoriesSuccess, getClientsSuccess, setModalClients,getAllCustomerCategorySuccess,getAllLocations,setEditingData,updateCurrentClient } =
+export const { getTeritoriesSuccess,
+  getAllLocationsStart,
+  getAllLocationsSuccess,
+  getAllLocationsFailure,
+  getClientsSuccess,
+  setModalClients,
+  getAllCustomerCategorySuccess,
+  setEditingData,
+  updateCurrentClient } =
   clientSlice.actions;
 export default clientSlice.reducer;

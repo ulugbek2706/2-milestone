@@ -1,9 +1,8 @@
 import { call, put, select, takeLatest } from "redux-saga/effects";
-
 import { toast } from "react-toastify";
 import {
   getAllCustomerCategorySuccess,
-  getAllLocations,
+  getAllLocations, getAllLocationsFailure, getAllLocationsStart, getAllLocationsSuccess,
   updateCurrentClient
 } from "components/clients/reducers/ClientSlice";
 import ApiCall from "../../../API/ApiCall";
@@ -93,11 +92,15 @@ function* workGetAllCustomerCategory() {
 
 
 
-function* workGetAllMapLocation() {
+// get location for client of map
+function* workGetAllMapLocation(action) {
   try {
-    const res = yield call(ApiCall, "/api/client/map", "GET");
-    yield put(getAllLocations(res.data));
-  } catch (error) {}
+    yield put(getAllLocationsStart());
+    const res = yield call(ApiCall, "/api/client/map?cities="+action.payload, "GET");
+    yield put(getAllLocationsSuccess(res.data));
+  } catch (error) {
+    yield put(getAllLocationsFailure(error.message));
+  }
 }
 
 // saga

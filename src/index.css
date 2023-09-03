@@ -1,24 +1,26 @@
 body {
-  margin: 0;
-  font-family: "Poppins", sans-serif;
-  font-family: "Rubik", sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  /* overflow: hidden; */
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    font-family: "Rubik", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    /* overflow: hidden; */
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
 @layer base {
-  html {
-    @apply text-neutral-800;
-  }
-  html.dark {
-    @apply text-neutral-50;
-    @apply bg-neutral-800;
-  }
+    html {
+        @apply text-neutral-800;
+    }
+
+    html.dark {
+        @apply text-neutral-50;
+        @apply bg-neutral-800;
+    }
 }
 
 @tailwind base;
@@ -26,105 +28,112 @@ code {
 @tailwind utilities;
 
 .PhoneInputInput {
-  padding: 15px;
+    padding: 15px;
 }
+
 .PhoneInputInput:focus {
-  outline: none;
+    outline: none;
 }
 
 .dropdownBar {
-  animation: dropdown 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+    animation: dropdown 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 
 @keyframes dropdown {
-  0% {
-    transform: translateY(-20px);
-  }
-  100% {
-    transform: translateY(0);
-  }
+    0% {
+        transform: translateY(-20px);
+    }
+    100% {
+        transform: translateY(0);
+    }
 }
 
 
-.clients:hover .clintsDrop{
-  display: block;
+.clients:hover .clintsDrop {
+    display: block;
 }
+
 /*  loading animation */
 
 .container-loader {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: fixed;
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
-  background-color: rgb(0,0,0 ,0.1);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    background-color: rgb(0, 0, 0, 0.1);
 
 
 }
-.container-loader::backdrop{
-  background-color: rgb(0,0,0 ,0.1);
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
+
+.container-loader::backdrop {
+    background-color: rgb(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
 }
 
 .loader {
-  display: flex;
-  align-items: center;
-  transform: scale(1.2);
+    display: flex;
+    align-items: center;
+    transform: scale(1.2);
 }
 
 .bar {
-  display: inline-block;
-  width: 3px;
-  height: 20px;
-  background-color: rgba(24, 21, 21, 0.5);
-  border-radius: 10px;
-  animation: scale-up4 1s linear infinite;
+    display: inline-block;
+    width: 3px;
+    height: 20px;
+    background-color: rgba(24, 21, 21, 0.5);
+    border-radius: 10px;
+    animation: scale-up4 1s linear infinite;
 }
 
 .bar:nth-child(2) {
-  height: 35px;
-  margin: 0 5px;
-  animation-delay: .25s;
+    height: 35px;
+    margin: 0 5px;
+    animation-delay: .25s;
 }
 
 .bar:nth-child(3) {
-  animation-delay: .5s;
+    animation-delay: .5s;
 }
 
 @keyframes scale-up4 {
-  20% {
-    background-color: black;
-    transform: scaleY(1.5);
-  }
+    20% {
+        background-color: black;
+        transform: scaleY(1.5);
+    }
 
-  40% {
-    transform: scaleY(1);
-  }
+    40% {
+        transform: scaleY(1);
+    }
 }
 
 
 /* scroll bar style  */
 
 ::-webkit-scrollbar {
-  width: 5px;
+    width: 5px;
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: #f1f1f1;
+    background: #f1f1f1;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #888;
-  border-radius: 3px;
+    background: #888;
+    border-radius: 3px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #555;
+    background: #555;
+}
+
+.ymaps-2-1-79-balloon__layout {
+    width: 150px !important;
 }

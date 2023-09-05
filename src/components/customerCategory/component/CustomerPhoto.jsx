@@ -39,7 +39,7 @@ function CustomerPhoto(props) {
                         className="hidden"
                         type="file"/>
                 </label>
-                <img className={"w-[70px] h-[70px] rounded-[50%] mt-2"} src={imgFileUrl === null ? logo : imgFileUrl}
+                <img title={"your logo"} className={"w-[70px] h-[70px] rounded-[50%] mt-2"} src={imgFileUrl === null ? logo : imgFileUrl}
                      alt="logo"/>
             </div>
 

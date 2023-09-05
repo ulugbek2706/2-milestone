@@ -1,6 +1,5 @@
 import {call, put, select, takeLatest} from "redux-saga/effects";
 
-
 import {toast} from "react-toastify";
 import {
     changeCurrentCustomerCategory,

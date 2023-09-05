@@ -16,6 +16,7 @@ import Loading from "components/loading/loading";
 import {useTranslation} from "react-i18next";
 import BalloonMap from "components/clientOnMap/component/balloonMap";
 import ReactDOMServer from 'react-dom/server';
+import logo from "../images/img.png"
 
 
 export default function ClientOnMap() {
@@ -25,6 +26,8 @@ export default function ClientOnMap() {
     const allTerritories = useSelector((state) => state.clientonmap.territories);
     const loading = useSelector((state) => state.client.isLoading);
     const [t] = useTranslation("global")
+
+    console.log(allLocation)
 
 
 // get all clients locations
@@ -92,7 +95,6 @@ export default function ClientOnMap() {
                                 placeholder={" choose Territory"}
                                 onChange={handleFilter}
                                 isMulti
-
                         />
                     </div>
 
@@ -111,7 +113,6 @@ export default function ClientOnMap() {
                                     <Map
                                         width={980}
                                         height={580}
-
                                         defaultState={{
                                             center: [39.767966, 64.421728],
                                             zoom: 6,
@@ -128,13 +129,15 @@ export default function ClientOnMap() {
                                                             item={item}/>),
                                                     }}
                                                     options={{
-                                                        iconImageHref: '../images/agents.png',
+                                                        iconLayout: 'default#image',
+                                                        iconImageHref: logo,
                                                         iconImageSize: [52, 52],
                                                         iconShape: {
                                                             type: 'Circle',
                                                             coordinates: [0, 0],
                                                             radius: 20
                                                         },
+
                                                     }}
 
                                                     // item?.active ? {} : {iconColor: "red"}

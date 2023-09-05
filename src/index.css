@@ -137,3 +137,8 @@ code {
 .ymaps-2-1-79-balloon__layout {
     width: 150px !important;
 }
+
+.ymaps-2-1-79-image {
+    backdrop-filter: none !important;
+
+}

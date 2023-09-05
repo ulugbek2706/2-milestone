@@ -16,7 +16,6 @@ import DialogActions from "@mui/material/DialogActions";
 import Button from "@mui/material/Button";
 import Dialog from "@mui/material/Dialog";
 import {toast, ToastContainer} from "react-toastify";
-import axios from "axios";
 
 let tg = window.Telegram.WebApp;
 
@@ -81,7 +80,6 @@ function WebApp(props) {
     // web app data send to bot
 
     const onSendData = useCallback(() => {
-        console.log(tg.initDataUnsafe)
         const data = {
             hello: "hello",
             world: "world"
@@ -113,7 +111,7 @@ function WebApp(props) {
     }, [onSendData]);
 
     const onCheckout = () => {
-        tg.MainButton.text = 'Sotib olish)';
+        tg.MainButton.text = 'send data)';
         tg.MainButton.show();
     };
 
@@ -127,9 +125,10 @@ function WebApp(props) {
                         <div>
                             <select
                                 defaultValue={""}
-                                {...register("territory")}
-                                className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                                {...register("territory", {required: "this field is required"})}
+                                className={` bg-gray-50 border ${errors?.territory ? 'border-red-500 outline-red-500' : 'border-gray-300'}  text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500`}>
                                 <option value={""} disabled>Territory</option>
+                                {/* territorylar map qilib chiziladi  */}
                                 <option value="US">United States</option>
                                 <option value="CA">Canada</option>
                                 <option value="FR">France</option>
@@ -139,9 +138,10 @@ function WebApp(props) {
                         <div className={"mt-2"}>
                             <select
                                 defaultValue={""}
-                                {...register("category")}
-                                className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                                {...register("category", {required: "this field is required"})}
+                                className={`bg - gray - 50 border ${errors?.category ? 'border-red-500 outline-red-500' : 'border-gray-300'} text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500`}>
                                 <option value={""} disabled>Customer Category</option>
+                                {/* categorylar map qilib chiziladi  */}
                                 <option value="US">United States</option>
                                 <option value="CA">Canada</option>
                                 <option value="FR">France</option>
@@ -152,32 +152,32 @@ function WebApp(props) {
                             <input
                                 type='tel'
                                 placeholder='phone...'
-                                className='border-form-stroke text-body-color placeholder-body-color focus:border-primary active:border-primary w-full rounded-lg border-[1.5px] py-2 px-5 font-medium outline-none transition disabled:cursor-default disabled:bg-[#F5F7FD]'
-                                {...register("phone", {required: "Name is required"})}
+                                className={`border-form-stroke ${errors?.phone ? 'border-red-500' : 'border-gray-300'} text-body-color placeholder-body-color focus:border-primary active:border-primary w-full rounded-lg border-[1.5px] py-2 px-5 font-medium outline-none transition disabled:cursor-default disabled:bg-[#F5F7FD]`}
+                                {...register("phone", {required: "this field is required"})}
                             />
                             <input
                                 type='text'
                                 placeholder='name...'
-                                className='mt-2 border-form-stroke text-body-color placeholder-body-color focus:border-primary active:border-primary w-full rounded-lg border-[1.5px] py-2 px-5 font-medium outline-none transition disabled:cursor-default disabled:bg-[#F5F7FD]'
-                                {...register("name", {required: "Name is required"})}
+                                className={`mt-2 border-form-stroke ${errors?.name ? 'border-red-500' : 'border-gray-300'} text-body-color placeholder-body-color focus:border-primary active:border-primary w-full rounded-lg border-[1.5px] py-2 px-5 font-medium outline-none transition disabled:cursor-default disabled:bg-[#F5F7FD]`}
+                                {...register("name", {required: "this field is required"})}
                             />
                             <input
                                 type='text'
                                 placeholder='Company name...'
-                                className='mt-2 border-form-stroke text-body-color placeholder-body-color focus:border-primary active:border-primary w-full rounded-lg border-[1.5px] py-2 px-5 font-medium outline-none transition disabled:cursor-default disabled:bg-[#F5F7FD]'
-                                {...register("companyName", {required: "Name is required"})}
+                                className={`mt-2 border-form-stroke ${errors?.companyName ? 'border-red-500' : 'border-gray-300'} text-body-color placeholder-body-color focus:border-primary active:border-primary w-full rounded-lg border-[1.5px] py-2 px-5 font-medium outline-none transition disabled:cursor-default disabled:bg-[#F5F7FD]`}
+                                {...register("companyName", {required: "this field is required"})}
                             />
                             <input
                                 type='text'
                                 placeholder='Address...'
-                                className='mt-2 border-form-stroke text-body-color placeholder-body-color focus:border-primary active:border-primary w-full rounded-lg border-[1.5px] py-2 px-5 font-medium outline-none transition disabled:cursor-default disabled:bg-[#F5F7FD]'
-                                {...register("address", {required: "Name is required"})}
+                                className={`mt-2 border-form-stroke ${errors?.address ? 'border-red-500' : 'border-gray-300'} text-body-color placeholder-body-color focus:border-primary active:border-primary w-full rounded-lg border-[1.5px] py-2 px-5 font-medium outline-none transition disabled:cursor-default disabled:bg-[#F5F7FD]`}
+                                {...register("address", {required: "this field is required"})}
                             />
                             <input
                                 type='text'
                                 placeholder='Tin...'
-                                className='mt-2 border-form-stroke text-body-color placeholder-body-color focus:border-primary active:border-primary w-full rounded-lg border-[1.5px] py-2 px-5 font-medium outline-none transition disabled:cursor-default disabled:bg-[#F5F7FD]'
-                                {...register("tin", {required: "Name is required"})}
+                                className={`mt-2 border-form-stroke ${errors?.tin ? 'border-red-500' : 'border-gray-300'} text-body-color placeholder-body-color focus:border-primary active:border-primary w-full rounded-lg border-[1.5px] py-2 px-5 font-medium outline-none transition disabled:cursor-default disabled:bg-[#F5F7FD]`}
+                                {...register("tin", {required: "this field is required"})}
                             />
                         </div>
                         <div className={"mt-3 border rounded"}>
@@ -207,7 +207,7 @@ function WebApp(props) {
                                     </Map>
                                 </div>
                             </YMaps>
-                            <div className={"flex justify-between items-center mt-2"}>
+                            <div className={"flex justify-between items-center mt-2 gap-2"}>
                                 <button
                                     className='inline-flex items-center justify-center rounded-md border border-black py-2 px-8 text-center text-base text-black transition hover:border-black hover:bg-black hover:text-white lg:px-8 xl:px-10'>
                                     Save
